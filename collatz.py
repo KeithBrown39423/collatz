@@ -2,8 +2,6 @@ def collatz(n: int) -> int:
     return n // 2 if n % 2 == 0 else 3 * n + 1
 
 def collatz_sequence(n: int):
-    if n <= 0:
-        raise ValueError("'n' must be a positive integer")
     sequence = [n]
     while n != 1:
         n = collatz(n)
